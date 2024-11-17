@@ -69,38 +69,38 @@ export function AnimatedModalDemo() {
                 </motion.div>
               ))}
             </div>
-            <div className="py-10 flex flex-wrap gap-x-4 gap-y-6 items-start justify-start max-w-sm mx-auto">
-              <div className="flex items-center justify-center">
+            <div className="py-10 flex flex-wrap gap-x-4 gap-y-6 items-center justify-center md:items-start md:justify-start max-w-sm mx-auto">
+              <div className="flex items-center justify-center w-full md:w-auto">
                 <PlaneIcon className="mr-1 text-muted-foreground h-4 w-4" />
                 <span className="text-muted-foreground text-sm">
                   5 connecting flights
                 </span>
               </div>
-              <div className="flex items-center justify-center">
+              <div className="flex items-center justify-center w-full md:w-auto">
                 <ElevatorIcon className="mr-1 text-muted-foreground h-4 w-4" />
                 <span className="text-muted-foreground text-sm">
                   12 hotels
                 </span>
               </div>
-              <div className="flex items-center justify-center">
+              <div className="flex items-center justify-center w-full md:w-auto">
                 <VacationIcon className="mr-1 text-muted-foreground h-4 w-4" />
                 <span className="text-muted-foreground text-sm">
                   69 visiting spots
                 </span>
               </div>
-              <div className="flex items-center justify-center">
+              <div className="flex items-center justify-center w-full md:w-auto">
                 <FoodIcon className="mr-1 text-muted-foreground h-4 w-4" />
                 <span className="text-muted-foreground text-sm">
                   Good food everyday
                 </span>
               </div>
-              <div className="flex items-center justify-center">
+              <div className="flex items-center justify-center w-full md:w-auto">
                 <MicIcon className="mr-1 text-muted-foreground h-4 w-4" />
                 <span className="text-muted-foreground text-sm">
                   Open Mic
                 </span>
               </div>
-              <div className="flex items-center justify-center">
+              <div className="flex items-center justify-center w-full md:w-auto">
                 <ParachuteIcon className="mr-1 text-muted-foreground h-4 w-4" />
                 <span className="text-muted-foreground text-sm">
                   Paragliding

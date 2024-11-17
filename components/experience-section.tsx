@@ -22,6 +22,7 @@ const companies: Company[] = [
         location: "Dubai, United Arab Emirates",
         achievements: ["Collaborate closely with developers, and content writers", 
             "Stay updated with the latest changes in industry&apos;s standards.",
+            "Create and use wireframes, prototypes, style guides, and user flows to communicate interaction ideas.",
             "Optimize user interfaces for performance and accessibility.",
             "Creates and delivers design assets for product integration."
         ]
@@ -90,7 +91,7 @@ export function ExperienceSection() {
           duration: 0.5,
           ease: "easeOut"
         }}
-        className="text-left"
+        className="text-center md:text-left"
       >
         <span className="text-primary text-sm font-medium tracking-widest uppercase">
           Experience
@@ -98,7 +99,7 @@ export function ExperienceSection() {
         <h2 className="text-3xl font-bold text-foreground mt-2">
           Places I&apos;ve Worked
         </h2>
-        <p className="text-muted-foreground mt-2 max-w-lg">
+        <p className="text-muted-foreground mt-2">
           A collection of my professional experiences and contributions across different companies.
         </p>
       </motion.div>
@@ -111,7 +112,7 @@ export function ExperienceSection() {
           duration: 0.8,
           ease: [0.6, -0.05, 0.01, 0.99]
         }}
-        className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-2 mt-12 max-w-2xl"
+        className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-2 mt-12"
       >
         {/* Company Tabs */}
         <ScrollArea className="w-full md:w-auto">
