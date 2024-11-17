@@ -13,7 +13,7 @@ export default function HomePage() {
             <AnimatedModalDemo />
           </div>
         </div>
-        <div className="px-4 py-16">
+        <div className="py-16">
           <Portfolio />
         </div>
       </div>
