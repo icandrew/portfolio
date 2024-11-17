@@ -1,18 +1,15 @@
-import { useId } from "react";
+import { SVGProps } from 'react'
 
-import { cn } from "@/lib/utils";
-
-interface DotPatternProps {
-  width?: any;
-  height?: any;
-  x?: any;
-  y?: any;
-  cx?: any;
-  cy?: any;
-  cr?: any;
-  className?: string;
-  [key: string]: any;
+interface DotPatternProps extends Omit<SVGProps<SVGSVGElement>, 'width' | 'height' | 'cx' | 'cy' | 'r'> {
+  width?: number | string;
+  height?: number | string;
+  x?: number;
+  y?: number;
+  cx?: number;
+  cy?: number;
+  cr?: number;
 }
+
 export function DotPattern({
   width = 16,
   height = 16,
@@ -24,33 +21,22 @@ export function DotPattern({
   className,
   ...props
 }: DotPatternProps) {
-  const id = useId();
-
   return (
     <svg
-      aria-hidden="true"
-      className={cn(
-        "pointer-events-none absolute inset-0 h-full w-full fill-neutral-400/80",
-        className,
-      )}
+      width={width}
+      height={height}
+      viewBox={`${x} ${y} ${width} ${height}`}
+      className={className}
       {...props}
     >
-      <defs>
-        <pattern
-          id={id}
-          width={width}
-          height={height}
-          patternUnits="userSpaceOnUse"
-          patternContentUnits="userSpaceOnUse"
-          x={x}
-          y={y}
-        >
-          <circle id="pattern-circle" cx={cx} cy={cy} r={cr} />
-        </pattern>
-      </defs>
-      <rect width="100%" height="100%" strokeWidth={0} fill={`url(#${id})`} />
+      <circle
+        cx={cx}
+        cy={cy}
+        r={cr}
+        fill="currentColor"
+      />
     </svg>
-  );
+  )
 }
 
 export default DotPattern;
