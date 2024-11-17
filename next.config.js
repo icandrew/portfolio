@@ -4,6 +4,7 @@ const nextConfig = {
     dangerouslyAllowSVG: true,
     contentDispositionType: 'attachment',
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
+    domains: ['www.behance.net', 'mir-s3-cdn-cf.behance.net', 'a5.behance.net'],
   },
 }
 
