@@ -4,6 +4,7 @@ import { useState } from 'react'
 import { cn } from "@/lib/utils"
 import { Check } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
+import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area"
 
 type Company = {
   name: string
@@ -90,44 +91,49 @@ export function ExperienceSection() {
       className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-2 mt-20 max-w-2xl mx-auto"
     >
       {/* Company Tabs */}
-      <motion.div 
-        initial={{ opacity: 0, x: -20 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{
-          duration: 0.8,
-          delay: 0.2,
-          ease: [0.6, -0.05, 0.01, 0.99]
-        }}
-        className="flex flex-row md:flex-col relative overflow-x-auto md:overflow-x-visible"
-      >
-        {companies.map((company, index) => (
-          <motion.div 
-            key={company.name} 
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{
-              duration: 0.5,
-              delay: 0.3 + index * 0.1,
-              ease: "easeOut"
-            }}
-            className="relative my-2"
-          >
-            <button 
-              onClick={() => setActiveCompany(company)}
-              className={cn(
-                "px-4 py-2 relative z-20 min-w-28 w-full",
-                "text-left rounded-md",
-                "transition-colors",
-                activeCompany.name === company.name 
-                  ? "bg-primary/10 text-primary"
-                  : "text-muted-foreground hover:bg-muted/50"
-              )}
-            >
-              {company.name}
-            </button>
-          </motion.div>
-        ))}
-      </motion.div>
+      <ScrollArea className="w-full md:w-auto">
+        <motion.div 
+          initial={{ opacity: 0, x: -20 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{
+            duration: 0.8,
+            delay: 0.2,
+            ease: [0.6, -0.05, 0.01, 0.99]
+          }}
+          className="flex flex-row md:flex-col relative pb-4 md:pb-0"
+        >
+          <div className="flex flex-row md:flex-col space-x-2 md:space-x-0 md:space-y-2">
+            {companies.map((company, index) => (
+              <motion.div 
+                key={company.name} 
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{
+                  duration: 0.5,
+                  delay: 0.3 + index * 0.1,
+                  ease: "easeOut"
+                }}
+                className="relative flex-shrink-0"
+              >
+                <button 
+                  onClick={() => setActiveCompany(company)}
+                  className={cn(
+                    "px-4 py-2 relative z-20 whitespace-nowrap",
+                    "text-left rounded-md",
+                    "transition-colors",
+                    activeCompany.name === company.name 
+                      ? "bg-primary/10 text-primary"
+                      : "text-muted-foreground hover:bg-muted/50"
+                  )}
+                >
+                  {company.name}
+                </button>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
+        <ScrollBar orientation="horizontal" className="md:hidden" />
+      </ScrollArea>
 
       {/* Experience Details */}
       <div className="md:pl-10 flex-1 overflow-hidden">

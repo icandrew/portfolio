@@ -26,7 +26,7 @@ export function Portfolio() {
               </span>, and tools like{" "}
               <span className="text-foreground font-medium">Adobe XD</span> and{" "}
               <span className="text-foreground font-medium">Figma</span>.{" "}
-              <span className="text-primary font-medium">Let's collaborate!</span>
+              <span className="text-primary font-medium">Let&apos;s collaborate!</span>
             </p>
           </BlurIn>
         </div>
