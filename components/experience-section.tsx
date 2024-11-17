@@ -21,8 +21,8 @@ const companies: Company[] = [
         period: "Sep 2021 - Jan 2023",
         location: "Dubai, United Arab Emirates",
         achievements: ["Collaborate closely with developers, and content writers", 
-            "Stay updated with the latest changes in industry's standards.",
-            "Optimize user inter faces for per formance and accessibility.",
+            "Stay updated with the latest changes in industry&apos;s standards.",
+            "Optimize user interfaces for performance and accessibility.",
             "Creates and delivers design assets for product integration."
         ]
       },
@@ -96,7 +96,7 @@ export function ExperienceSection() {
           Experience
         </span>
         <h2 className="text-3xl font-bold text-foreground mt-2">
-          Places I've Worked
+          Places I&apos;ve Worked
         </h2>
         <p className="text-muted-foreground mt-2 max-w-lg">
           A collection of my professional experiences and contributions across different companies.
