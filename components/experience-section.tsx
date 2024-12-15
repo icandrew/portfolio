@@ -82,7 +82,7 @@ export function ExperienceSection() {
   const [activeCompany, setActiveCompany] = useState(companies[0])
 
   return (
-    <div className="space-y-8">
+    <div className="space-y-8 w-full">
       {/* Section Title */}
       <motion.div
         initial={{ opacity: 0, y: -20 }}
@@ -112,7 +112,7 @@ export function ExperienceSection() {
           duration: 0.8,
           ease: [0.6, -0.05, 0.01, 0.99]
         }}
-        className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-2 mt-12"
+        className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-2 mt-12 w-full"
       >
         {/* Company Tabs */}
         <ScrollArea className="w-full md:w-auto">
