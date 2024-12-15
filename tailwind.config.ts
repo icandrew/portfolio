@@ -1,6 +1,19 @@
 import type { Config } from "tailwindcss"
 import type { PluginAPI } from "tailwindcss/types/config"
+
+// Create a type declaration for the flattenColorPalette utility
+declare module 'tailwindcss/lib/util/flattenColorPalette' {
+  const flattenColorPalette: (colors: object) => Record<string, string>
+  export default flattenColorPalette
+}
+
 import flattenColorPalette from "tailwindcss/lib/util/flattenColorPalette"
+
+// Add the PluginAPI type definition
+type PluginAPI = {
+  addBase: (base: Record<string, Record<string, string>>) => void;
+  theme: (path: string) => Record<string, string>;
+}
 
 // This plugin adds each Tailwind color as a global CSS variable, e.g. var(--gray-200).
 function addVariablesForColors({ addBase, theme }: PluginAPI) {

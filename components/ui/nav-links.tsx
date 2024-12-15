@@ -1,6 +1,6 @@
 "use client"
 
-import { Home, FileText, Github, Linkedin, Twitter, Youtube, Sun, Moon } from 'lucide-react'
+import { Home, FileText, Github, Linkedin, Sun, Moon } from 'lucide-react'
 import Link from "next/link"
 import { RainbowButton } from "@/components/ui/rainbow-button"
 import { useTheme } from "next-themes"
@@ -40,7 +40,7 @@ export function NavLinks() {
           <FileText className="w-5 h-5 text-muted-foreground" />
         </Link>
         <Link
-          href="https://github.com"
+          href="https://github.com/icandrew"
           className="p-2 hover:bg-muted/50 rounded-full transition-colors"
           aria-label="GitHub"
         >
@@ -53,20 +53,20 @@ export function NavLinks() {
         >
           <Linkedin className="w-5 h-5 text-muted-foreground" />
         </Link>
-        <Link
+        {/* <Link
           href="https://twitter.com"
           className="p-2 hover:bg-muted/50 rounded-full transition-colors"
           aria-label="Twitter"
         >
           <Twitter className="w-5 h-5 text-muted-foreground" />
-        </Link>
-        <Link
+        </Link> */}
+        {/* <Link
           href="https://youtube.com"
           className="p-2 hover:bg-muted/50 rounded-full transition-colors"
           aria-label="YouTube"
         >
           <Youtube className="w-5 h-5 text-muted-foreground" />
-        </Link>
+        </Link> */}
         <button
           onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
           className="p-2 hover:bg-muted/50 rounded-full transition-colors"
