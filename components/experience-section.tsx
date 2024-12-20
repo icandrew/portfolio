@@ -32,49 +32,76 @@ const companies: Company[] = [
         role: "UI/UX Designer",
         period: "Feb 2019 - Sep 2021",
         location: "Jumeirah Lakes Towers, Dubai, United Arab Emirates",
-        achievements: ["s"]
+        achievements: ["Gather and evaluate user requirements in collaboration with the product managers, engineers.",
+          "Develop UI mockups and prototypes with fluent interaction design that clearly illustrate how sites function and look like to satisfy user needs.",
+          "Work closely with the owner to conceptualize and create branding materials, marketing collateral, and user interface designs for mobile applications.",
+          "Collaborate closely with the development team to iterate on designs and maintain brand consistency across platforms."
+        ]
       },
       {
         name: "Be Media Group",
         role: "Senior Graphic & Web Designer",
         period: "Mar 2018 - Feb 2019",
-        location: "Australia",
-        achievements: ["s"]
+        location: "Perth,Australia (Remote)",
+        achievements: ["Produce effective, brand-aligned creative layouts for deployment across a range of print and digital applications.", 
+            "Design web and mobile products from concept to fully thought-through visual designs.", 
+            "Produce UI concepts, mock-ups, prototypes, test variants and final designs.", 
+            "Collab orates effectively with copy writers, digital content producers, brand, marketing, product owners, business analysts and developers."
+        ]
       },
       {
         name: "The Nail Spa",
         role: "Graphic Designer",
         period: "Nov 2017 - Jan 2018",
-        location: "Dubai, United Arab Emirates",
-        achievements: ["s"]
+        location: "Dubai, United Arab Emirates (Remote)",
+        achievements: ["Design creative assets for multi-channel marketing campaigns and initiatives, including websites, EDMs, social media content , banners and other projects.", 
+          "Checks and provides technical feedback on artwork of other team members", 
+          "Creates excellent typography and lay-out skills will benefit the creation of artwork."]
+      },
+      {
+        name: "Hyper6",
+        role: "Graphic & Web Designer",
+        period: "Aug 2016 - Aug 2017",
+        location: "Panama City, Panama (Remote)",
+        achievements: ["Create mock-ups and digital design assets for websites and digitalplatforms.",
+          "Responsible in responsive design; working to browser and mobile standards and limitations.",
+          "Create ads, landing pages, and emails that draw customer attention and drive click-through and conversion.",
+          "Works with Develop ers to create digital solutions for both external clients and internal projects.",
+          "Iterate on designs based on client feedback and project requirements, maintaining a high standard of quality and creativity."
+        ]
       },
       {
         name: "Tata Consultancy Services",
         role: "Web Designer",
-        period: "Jun 2015 - Jan 2017",
+        period: "Jun 2013 - Aug 2016",
         location: "Bonifacio Global City",
-        achievements: ["s"]
-      },
-      {
-        name: "Hibu",
-        role: "Web Designer",
-        period: "Apr 2013 - Jun 2015",
-        location: "Bonifacio Global City",
-        achievements: ["s"]
+        achievements: ["Ensures website function and stability across different devices including desktop, tablet and mobile.",
+          "Maintaining high standards and ensuring only the best work is released.",
+          "Develop UI mockups and prototypes that clearly illustrate how sites function and look like.",
+          "Adhere to style standards on fonts, colors and images"
+        ]
       },
       {
         name: "CIM Technologies, Inc.",
         role: "Graphic Designer / Web Designer",
         period: "Feb 2012 - Feb 2013",
         location: "Makati City",
-        achievements: ["s"]
+        achievements: ["Create the website architecture.",
+          "Design and production of digital communications including static and animated content for digital brand assets and external media.",
+          "Collab orate with events and marketing team to create digital and print art work for events and marketing campaigns.",
+          "Develop visually compelling marketing materials, including digital and print assets, to promote software and hardware solutions, project management tools, and education services.",
+          "Ensure brand consistency and effectively communicate complex technical concepts to diverse audiences.",
+        ]
       },
       {
         name: "Lenotech Corporation",
         role: "Graphic Artist",
         period: "Jul 2011 - Jan 2012",
         location: "Sta. Mesa, Manila",
-        achievements: ["s"]
+        achievements: ["Create visually captivating marketing materials, including digital and print assets, to promote computer furniture products and A4tech distributorship.",
+          "Collaborate with dealers and stakeholders to maintain brand consistency and effectively communicate product features and benefits to target audiences in the IT industry.",
+          "Continuously innovate designs to stay ahead in the competitive market and enhance brand visibility."
+        ]
       }
 ]
 
@@ -96,7 +123,7 @@ export function ExperienceSection() {
         <span className="text-primary text-sm font-medium tracking-widest uppercase">
           Experience
         </span>
-        <h2 className="text-3xl font-bold text-foreground mt-2">
+        <h2 className="text-3xl font-bold text-foreground mt-2 w-full">
           Places I&apos;ve Worked
         </h2>
         <p className="text-muted-foreground mt-2">
