@@ -5,7 +5,6 @@ import {
   ModalBody,
   ModalContent,
   ModalFooter,
-  ModalTrigger,
 } from "@/components/ui/animated-modal";
 import { Button } from "@/components/ui/button";
 
@@ -24,18 +23,17 @@ export function AnimatedModalDemo() {
   return (
     <div className="flex items-center justify-center">
       <Modal open={open} onOpenChange={setOpen}>
-        <ModalTrigger asChild>
-          <Button
-            className="bg-primary text-primary-foreground hover:bg-primary/90 flex justify-center group/modal-btn relative overflow-hidden"
-          >
-            <span className="group-hover/modal-btn:translate-x-[200%] text-center transition-transform duration-500">
-              Download CV
-            </span>
-            <div className="-translate-x-[200%] group-hover/modal-btn:translate-x-0 flex items-center justify-center absolute inset-0 transition-transform duration-500">
-              📥
-            </div>
-          </Button>
-        </ModalTrigger>
+        <Button
+          onClick={() => setOpen(true)}
+          className="bg-primary text-primary-foreground hover:bg-primary/90 flex justify-center group/modal-btn relative overflow-hidden"
+        >
+          <span className="group-hover/modal-btn:translate-x-[200%] text-center transition-transform duration-500">
+            Download CV
+          </span>
+          <div className="-translate-x-[200%] group-hover/modal-btn:translate-x-0 flex items-center justify-center absolute inset-0 transition-transform duration-500">
+            📥
+          </div>
+        </Button>
         <ModalBody>
           <ModalContent>
             <h4 className="text-lg md:text-2xl font-bold text-center mb-8">
