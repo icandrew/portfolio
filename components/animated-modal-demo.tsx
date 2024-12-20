@@ -22,7 +22,7 @@ export function AnimatedModalDemo() {
 
   return (
     <div className="flex items-center justify-center">
-      <Modal open={open} onOpenChange={setOpen}>
+      <div>
         <Button
           onClick={() => setOpen(true)}
           className="bg-primary text-primary-foreground hover:bg-primary/90 flex justify-center group/modal-btn relative overflow-hidden"
@@ -34,27 +34,33 @@ export function AnimatedModalDemo() {
             📥
           </div>
         </Button>
-        <ModalBody>
-          <ModalContent>
-            <h4 className="text-lg md:text-2xl font-bold text-center mb-8">
-              Download Resume
-            </h4>
-            <div className="flex flex-col items-center justify-center space-y-4">
-              <p className="text-sm text-muted-foreground text-center">
-                Click the button below to download the CV in PDF format
-              </p>
-            </div>
-          </ModalContent>
-          <ModalFooter className="gap-4">
-            <Button variant="outline" onClick={handleCancel}>
-              Cancel
-            </Button>
-            <Button onClick={handleDownload}>
-              Download PDF
-            </Button>
-          </ModalFooter>
-        </ModalBody>
-      </Modal>
+
+        <Modal 
+          open={open} 
+          onOpenChange={setOpen}
+        >
+          <ModalBody>
+            <ModalContent>
+              <h4 className="text-lg md:text-2xl font-bold text-center mb-8">
+                Download Resume
+              </h4>
+              <div className="flex flex-col items-center justify-center space-y-4">
+                <p className="text-sm text-muted-foreground text-center">
+                  Click the button below to download the CV in PDF format
+                </p>
+              </div>
+            </ModalContent>
+            <ModalFooter className="gap-4">
+              <Button variant="outline" onClick={handleCancel}>
+                Cancel
+              </Button>
+              <Button onClick={handleDownload}>
+                Download PDF
+              </Button>
+            </ModalFooter>
+          </ModalBody>
+        </Modal>
+      </div>
     </div>
   );
 }
