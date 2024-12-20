@@ -44,17 +44,24 @@ export function AnimatedModalDemo() {
               <h4 className="text-lg md:text-2xl font-bold text-center mb-8">
                 Download Resume
               </h4>
-              <div className="flex flex-col items-center justify-center space-y-4">
-                <p className="text-sm text-muted-foreground text-center">
+              <div className="flex flex-col items-center justify-center space-y-4 w-full px-4 sm:px-6">
+                <p className="text-sm text-muted-foreground text-center w-full">
                   Click the button below to download the CV in PDF format
                 </p>
               </div>
             </ModalContent>
-            <ModalFooter className="gap-4">
-              <Button variant="outline" onClick={handleCancel}>
+            <ModalFooter className="flex w-full justify-end gap-4 px-4 sm:px-6">
+              <Button 
+                variant="outline" 
+                onClick={handleCancel}
+                className="flex-1 sm:flex-none"
+              >
                 Cancel
               </Button>
-              <Button onClick={handleDownload}>
+              <Button 
+                onClick={handleDownload}
+                className="flex-1 sm:flex-none"
+              >
                 Download PDF
               </Button>
             </ModalFooter>
