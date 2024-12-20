@@ -12,9 +12,9 @@ export function Modal({ children, open, onOpenChange }: ModalProps) {
   return (
     <>
       {open && (
-        <div className="fixed inset-0 z-50">
+        <div className="fixed inset-0 z-[100]">
           <div className="fixed inset-0 bg-background/80 backdrop-blur-sm" onClick={() => onOpenChange?.(false)} />
-          <div className="fixed left-[50%] top-[50%] z-50 translate-x-[-50%] translate-y-[-50%]">
+          <div className="fixed left-[50%] top-[50%] z-[101] translate-x-[-50%] translate-y-[-50%] max-h-[90vh] w-[90vw] max-w-[500px] overflow-y-auto">
             {children}
           </div>
         </div>

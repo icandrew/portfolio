@@ -4,7 +4,7 @@ import { ExperienceSection } from "./experience-section"
 
 export function Portfolio() {
   return (
-    <div className="text-foreground sm:p-8 md:p-12 lg:p-16 overflow-hidden">
+    <div className="text-foreground sm:p-8 md:p-12 lg:p-16 overflow-hidden pb-[calc(42px+2rem)]">
       <div className="w-full sm:max-w-2xl md:max-w-4xl mx-auto space-y-16">
         {/* Hero Section */}
         <div className="space-y-6 text-center md:text-left">
