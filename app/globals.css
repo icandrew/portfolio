@@ -34,6 +34,16 @@
     --color-3: 210 100% 63%;
     --color-4: 195 100% 63%;
     --color-5: 90 100% 63%;
+    --static-transparent: transparent;
+    --page-background: hsl(var(--background));
+    --brand-background-medium: rgba(0, 0, 0, 0.1);
+    --accent-solid-medium: rgba(0, 0, 0, 0.05);
+    --brand-on-background-weak: rgba(0, 0, 0, 0.1);
+    --static-space-16: 16px;
+    --static-space-24: 24px;
+    --static-space-32: 32px;
+    --static-space-48: 48px;
+    --static-space-64: 64px;
   }
 
   .dark {
@@ -66,6 +76,9 @@
     --color-3: 210 100% 63%;
     --color-4: 195 100% 63%;
     --color-5: 90 100% 63%;
+    --brand-background-medium: rgba(255, 255, 255, 0.1);
+    --accent-solid-medium: rgba(255, 255, 255, 0.05);
+    --brand-on-background-weak: rgba(255, 255, 255, 0.1);
   }
 }
 
