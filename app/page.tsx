@@ -2,6 +2,7 @@ import { NavLinks } from "@/components/ui/nav-links"
 import { Portfolio } from "@/components/portfolio"
 import { Background } from "@/components/ui/background-pattern"
 import { AnimatedModalDemo } from "@/components/animated-modal-demo"
+import ProjectGrid from "@/components/project-grid"
 
 export default function HomePage() {
   return (
@@ -16,9 +17,10 @@ export default function HomePage() {
           <div className="flex justify-center md:justify-end px-4 md:px-0 pt-4">
             <AnimatedModalDemo />
           </div>
-        </div>
-        <div className="py-16">
-          <Portfolio />
+          <div className="space-y-16 py-16">
+            <Portfolio />
+            <ProjectGrid />
+          </div>
         </div>
       </div>
       <NavLinks />
