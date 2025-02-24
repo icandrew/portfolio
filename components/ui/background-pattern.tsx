@@ -38,16 +38,7 @@ interface BackgroundProps {
 }
 
 const Background = forwardRef<HTMLDivElement, BackgroundProps>(
-    ({
-        position = 'fixed',
-        gradient = {},
-        dots = {},
-        lines = {},
-        mask = 'none',
-        className,
-        style,
-        darkGradient
-    }, forwardedRef) => {
+    ({ position = 'fixed', gradient = {}, dots = {}, lines = {}, mask = 'none', className, style, darkGradient }, forwardedRef) => {
         const dotsColor = dots.color ?? 'brand-on-background-weak';
         const dotsSize = dots.size ?? '16';
 
@@ -69,8 +60,8 @@ const Background = forwardRef<HTMLDivElement, BackgroundProps>(
 
             const handleMouseMove = (event: MouseEvent) => {
                 const now = Date.now();
-                if (now - lastCall < 16) return; // Throttle to ~60fps
-                lastCall = now;
+                if (now - lastCallRef.current < 16) return; // Use lastCallRef instead
+                lastCallRef.current = now;
 
                 if (backgroundRef.current) {
                     const rect = backgroundRef.current.getBoundingClientRect();

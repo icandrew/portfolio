@@ -3,11 +3,7 @@
 import { ExperienceSection } from "./experience-section"
 import Image from "next/image"
 
-interface PortfolioProps {
-  className?: string;
-}
-
-export function Portfolio() {  // Remove unused className parameter
+export function Portfolio() {  // Remove unused interface and prop
   return (
     <div className="text-foreground sm:p-8 md:p-12 lg:p-0 py-6 overflow-hidden pb-[calc(42px+2rem)] relative">
       <div className="fixed left-0 top-0 z-10 opacity-60 max-w-screen overflow-hidden">
