@@ -56,6 +56,7 @@ const Background = forwardRef<HTMLDivElement, BackgroundProps>(
         const maskSize = 1200;
         const backgroundRef = useRef<HTMLDivElement>(null);
         let lastCall = 0;
+        const lastCallRef = useRef<number>(0); // Add useRef for lastCall
 
         // Handle ref forwarding
         useEffect(() => {

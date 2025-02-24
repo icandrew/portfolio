@@ -19,7 +19,7 @@ export default function Home() {
           <div className="flex justify-center md:justify-end px-4 md:px-0 pt-4">
             <AnimatedModalDemo />
           </div>
-          <div className="space-y-16 py-6">
+          <div className="space-y-16 py-12">
             <Portfolio />
           </div>
         </div>
