@@ -61,7 +61,7 @@ const Background = forwardRef<HTMLDivElement, BackgroundProps>(
             const handleMouseMove = (event: MouseEvent) => {
                 const now = Date.now();
                 if (now - lastCallRef.current < 16) return; // Use lastCallRef instead
-                lastCallRef.current = now;
+                lastCallRef.current = now; // Use ref instead of variable
 
                 if (backgroundRef.current) {
                     const rect = backgroundRef.current.getBoundingClientRect();
